@@ -1,0 +1,31 @@
+- A process is an independent executing program with its own memory space 
+- A thread is the smallesst unit of execution within a process and shares memory with other threads
+- Threads within the same process share memory and resources, enabling faster communication
+
+~ Javascript is fundamentally single threaded and uses an event loop for concurrency
+~ Python is a multi threaded language but is typically limited to executing a single thread at a time within a single process due to the global interpreter lock (GIL)
+
+~ The **threading** module allows multiple threads to run concurrently withing a single process
+~ Threads are particularly useful when the taasks are IO bound such as file operations or network requetts
+
+- threading module - create multiple threads in a single process
+- multiprocessing modules - create multiple processes
+
+- Threading gives you concurrency, but not parallelism.
+Concurrency — multiple tasks are in progress at the same time (taking turns)
+Parallelism — multiple tasks are literally running at the same time (simultaneously)
+
+----------------------------------------------------------------
+**Without GIL**
+Core 1:  Thread 1 ████████████████
+Core 2:  Thread 2 ████████████████
+                  → true parallelism
+
+**With GIL**
+Core 1:  Thread 1 ████░░░░████░░░░
+Core 1:  Thread 2 ░░░░████░░░░████
+                  → taking turns, on ONE core
+---------------------------------------------------------------
+
+
+threading.activeCount() --- return the total number of active threads including the main thread
