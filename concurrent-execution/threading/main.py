@@ -24,7 +24,7 @@ thread_2.start()
 
 print(threading.active_count())
 # threading.active_count() returns the total number of active threads
-# here 3 threads are active (thread1, thread2, main program thread)
+# here 3 threads are active (thread1, thread2, main program thread)j
 
 #without .join() the main program ain't wait for the threads to finish
 thread_1.join()
