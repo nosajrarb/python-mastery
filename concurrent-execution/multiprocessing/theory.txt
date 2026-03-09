@@ -1,0 +1,3 @@
+- multiprocessing offers both local and remote concurrency
+- multiprocssing introduces the process Pool class 
+- a process pool object controls a pool of worker processes to which jobs can be submitted
